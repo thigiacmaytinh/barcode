@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libzxing", "BarcodeReaderCpp\prj\libzxing.vcxproj", "{8ECFF017-41D4-3BF5-B5A0-CA8D08FCEC2C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BarcodeReaderCpp", "BarcodeReaderCpp\prj\zxing.vcxproj", "{5F64963D-4051-3356-ABD5-5FF15A606C48}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8ECFF017-41D4-3BF5-B5A0-CA8D08FCEC2C} = {8ECFF017-41D4-3BF5-B5A0-CA8D08FCEC2C}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8ECFF017-41D4-3BF5-B5A0-CA8D08FCEC2C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8ECFF017-41D4-3BF5-B5A0-CA8D08FCEC2C}.Debug|Win32.Build.0 = Debug|Win32
+		{8ECFF017-41D4-3BF5-B5A0-CA8D08FCEC2C}.Release|Win32.ActiveCfg = Release|Win32
+		{8ECFF017-41D4-3BF5-B5A0-CA8D08FCEC2C}.Release|Win32.Build.0 = Release|Win32
+		{5F64963D-4051-3356-ABD5-5FF15A606C48}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5F64963D-4051-3356-ABD5-5FF15A606C48}.Debug|Win32.Build.0 = Debug|Win32
+		{5F64963D-4051-3356-ABD5-5FF15A606C48}.Release|Win32.ActiveCfg = Release|Win32
+		{5F64963D-4051-3356-ABD5-5FF15A606C48}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C26BAD67-4B97-47A2-BC0B-92CC3C539CB8}
+	EndGlobalSection
+EndGlobal
