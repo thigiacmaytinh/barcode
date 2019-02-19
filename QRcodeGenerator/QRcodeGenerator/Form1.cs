@@ -36,7 +36,12 @@ namespace QRCoderDemo
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(textBoxQRCode.Text, eccLevel);
             QRCode qrCode = new QRCode(qrCodeData);
 
-            pictureBoxQRCode.BackgroundImage = qrCode.GetGraphic(20, Color.Black, Color.White, getIconBitmap(), (int)iconSize.Value);
+            int iconSize = (int)numIconSize.Value;
+            int cellSize = (int)numCellSize.Value;
+            int padding = (int)numPadding.Value;
+
+            pictureBoxQRCode.BackgroundImage = qrCode.GetGraphic(cellSize, Color.Black, Color.White, getIconBitmap(), iconSize, padding);
+            pictureBoxQRCode.BackgroundImage.Save("qrcode.png");
         }
 
         private Bitmap getIconBitmap()
@@ -65,9 +70,9 @@ namespace QRCoderDemo
             if (dr == System.Windows.Forms.DialogResult.OK)
             {
                 iconPath.Text = openFileDlg.FileName;
-                if (iconSize.Value == 0)
+                if (numIconSize.Value == 0)
                 {
-                    iconSize.Value = iconSize.Maximum;
+                    numIconSize.Value = numIconSize.Maximum;
                 }
             }
             else
@@ -82,15 +87,17 @@ namespace QRCoderDemo
             {
                 iconPath.Enabled = false;
                 selectIconBtn.Enabled = false;
-                iconSize.Enabled = false;
+                numIconSize.Enabled = false;
                 iconPath.Text = "";
-                iconSize.Value = 0;
+                numIconSize.Value = 15;
+                numPadding.Enabled = false;
             }
             else
             {
                 iconPath.Enabled = true;
                 selectIconBtn.Enabled = true;
-                iconSize.Enabled = true;
+                numIconSize.Enabled = true;
+                numPadding.Enabled = true;
             }
 
         }
