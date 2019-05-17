@@ -1,7 +1,6 @@
 package com.thigiacmaytinh.qrcodereader;
 
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,21 +34,6 @@ public class ScanQRcodeActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp(){
         finish();
         return true;
-    }
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-    }
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-
-    @Override
-    protected void onPause() {
-        super.onPause();
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////

@@ -159,6 +159,7 @@
             this.pictureBoxQRCode.Size = new System.Drawing.Size(300, 300);
             this.pictureBoxQRCode.TabIndex = 2;
             this.pictureBoxQRCode.TabStop = false;
+            this.pictureBoxQRCode.Click += new System.EventHandler(this.pictureBoxQRCode_Click);
             // 
             // numPadding
             // 

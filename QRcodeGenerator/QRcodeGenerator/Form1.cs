@@ -41,7 +41,7 @@ namespace QRCoderDemo
             int padding = (int)numPadding.Value;
 
             pictureBoxQRCode.BackgroundImage = qrCode.GetGraphic(cellSize, Color.Black, Color.White, getIconBitmap(), iconSize, padding);
-            pictureBoxQRCode.BackgroundImage.Save("qrcode.png");
+            
         }
 
         private Bitmap getIconBitmap()
@@ -107,5 +107,14 @@ namespace QRCoderDemo
             System.Diagnostics.Process.Start("http://thigiacmaytinh.com");
         }
 
+        private void pictureBoxQRCode_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Image |*.png";
+            sfd.ShowDialog();
+            string fileName = sfd.FileName;
+
+            pictureBoxQRCode.BackgroundImage.Save(fileName);
+        }
     }
 }
